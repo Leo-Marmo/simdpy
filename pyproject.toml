@@ -1,0 +1,28 @@
+[project]
+name = "simdpy"
+version = "0.1.0"
+description = "SIMD‑accelerated add via pybind11 & Apple Accelerate"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "hypothesis>=6.13",
+    "pytest-benchmark>=4.0",
+]
+
+[build-system]
+requires = [
+    "hatchling>=1.21.0",
+    "pybind11>=2.12",
+]
+build-backend = "hatchling.build"
+
+[tool.hatch.envs.default]
+type = "virtual"
+python = "3.11"
+path = ".hatch_venv"
+dependencies = ["simdpy[dev]"]

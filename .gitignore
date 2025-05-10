@@ -1,0 +1,19 @@
+# ───────────────────────────────
+#  simdpy  – C++ / pybind11 / Hatch
+#  .gitignore
+# ───────────────────────────────
+
+
+# ░░ Hatch & virtual‑envs ░░
+.hatch_venv/
+
+# ░░ Build artifacts ░░
+build/
+CMakeFiles/
+.__pycache__/
+.hypothesis/
+.cmake-build-debug/
+
+# ░░ IDE / editor miscellany ░░
+.vscode/
+.idea/
